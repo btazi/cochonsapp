@@ -8,7 +8,6 @@ default: &default
   adapter: mysql2
   pool: 5
   timeout: 5000
-  host: localhost
   username: root
   password: <%= ENV['COCHONS_APP_DEVELOPMENT_DATABASE_PASSWORD'] %>
 
@@ -27,4 +26,4 @@ production:
   <<: *default
   database: cochons_production
   username: root
-  password: <%= ENV['COCHONS_APP_PRODUCTION_DATABASE_PASSWORD'] %>
+  password: <%= ENV['PRODUCTION_DATABASE_PASSWORD'] %>
