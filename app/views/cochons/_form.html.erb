@@ -1,0 +1,33 @@
+<%= form_for(@cochon) do |f| %>
+  <% if @cochon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cochon.errors.count, "error") %> prohibited this cochon from being saved:</h2>
+
+      <ul>
+      <% @cochon.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :kg %><br>
+    <%= f.number_field :kg %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module CochonsHelper
+end

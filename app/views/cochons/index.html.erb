@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cochons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Kg</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cochons.each do |cochon| %>
+      <tr>
+        <td><%= cochon.name %></td>
+        <td><%= cochon.age %></td>
+        <td><%= cochon.kg %></td>
+        <td><%= cochon.description %></td>
+        <td><%= link_to 'Show', cochon %></td>
+        <td><%= link_to 'Edit', edit_cochon_path(cochon) %></td>
+        <td><%= link_to 'Destroy', cochon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cochon', new_cochon_path %>

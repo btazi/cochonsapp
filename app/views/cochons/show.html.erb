@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cochon.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @cochon.age %>
+</p>
+
+<p>
+  <strong>Kg:</strong>
+  <%= @cochon.kg %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cochon.description %>
+</p>
+
+<%= link_to 'Edit', edit_cochon_path(@cochon) %> |
+<%= link_to 'Back', cochons_path %>
