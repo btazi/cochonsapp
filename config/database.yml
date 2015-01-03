@@ -8,6 +8,7 @@ default: &default
   adapter: mysql2
   pool: 5
   timeout: 5000
+  host: localhost
   username: root
   password: <%= ENV['COCHONS_APP_DEVELOPMENT_DATABASE_PASSWORD'] %>
 
